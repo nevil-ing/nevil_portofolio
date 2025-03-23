@@ -16,7 +16,12 @@ class MainHeader extends StatelessWidget {
           // profile
           ResponsiveRowColumnItem(
             rowFlex: 0,
-            child:  CircleAvatar(child: Image.asset('assets/img/profile.png'),),
+            child:  Container(
+              margin: EdgeInsets.only(right: 10, left: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50)
+              ),
+              child: Image.asset('assets/img/profile.png'),),
           ),
 
           // Desktop Navigation (Hidden on mobile)
