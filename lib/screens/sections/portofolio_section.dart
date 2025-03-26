@@ -54,7 +54,7 @@ class PortfolioSection extends StatelessWidget {
       elevation: 4,
       child: InkWell(
         onTap: () {
-          // Handle project tap - maybe show details dialog or navigate
+
           print('Tapped project ${index + 1}');
         },
         child: Padding(
@@ -80,7 +80,7 @@ class PortfolioSection extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               Text(
-                'Brief description of project ${index + 1}...',
+                'description ${index + 1}...',
                 style: Theme.of(context).textTheme.bodySmall,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,

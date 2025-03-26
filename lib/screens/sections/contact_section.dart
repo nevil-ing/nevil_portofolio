@@ -39,7 +39,7 @@ class ContactSection extends StatelessWidget {
                 children: [
                   ElevatedButton.icon(
                     icon: const Icon(Icons.email_outlined),
-                    label: const Text('your.email@example.com'),
+                    label: const Text('nevilingutu12@gmail.com'),
                     onPressed: () {
                       // Implement mailto link
                       // Consider using url_launcher package
