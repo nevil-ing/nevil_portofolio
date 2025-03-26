@@ -157,8 +157,7 @@ class _MainBodyState extends State<MainBody> {
                 controller: _scrollController,
                 child: Column(
                   children: [
-                    // No need for the Home key here, handled by scroll offset 0
-                    // Add some padding at the top if the first section feels too close
+
                     // SizedBox(height: 20),
 
                     // --- Sections ---
