@@ -47,13 +47,20 @@ class ContactSection extends StatelessWidget {
                   ),
                   OutlinedButton.icon(
                     icon: const Icon(Icons.link), // Replace with LinkedIn/GitHub Icon
-                    label: const Text('LinkedIn / GitHub'),
+                    label: const Text('GitHub'),
                     onPressed: () {
                       // Implement link opening
                       // Consider using url_launcher package
                     },
                   ),
-                  // Add more contact buttons (Phone, etc.)
+                  OutlinedButton.icon(
+                    icon: const Icon(Icons.link), // Replace with LinkedIn/GitHub Icon
+                    label: const Text('LinkedIn'),
+                    onPressed: () {
+                      // Implement link opening
+                      // Consider using url_launcher package
+                    },
+                  ),
                 ],
               ),
               const SizedBox(height: 40),
