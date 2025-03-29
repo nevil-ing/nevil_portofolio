@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nevil_portofolio/screens/home/widgets/MainHeader.dart';
 import 'package:nevil_portofolio/screens/home/widgets/footer.dart';
+import 'package:nevil_portofolio/screens/sections/sub_heading_section.dart';
 
 import '../../sections/about_section.dart';
 import '../../sections/contact_section.dart';
@@ -158,14 +159,15 @@ class _MainBodyState extends State<MainBody> {
                 child: Column(
                   children: [
 
-                    // SizedBox(height: 20),
 
-                    // --- Sections ---
+
+                    // Sections
+                    SubHeadingSection(),
                     AboutSection(key: _sectionKeys[Section.about]),
                     PortfolioSection(key: _sectionKeys[Section.portfolio]),
                     ContactSection(key: _sectionKeys[Section.contact]),
 
-                    // --- Footer ---
+                    //Footer
                     const Footer(),
                   ],
                 ),

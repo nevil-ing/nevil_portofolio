@@ -8,15 +8,15 @@ class AboutSection extends StatelessWidget {
     // Use LayoutBuilder for specific responsive adjustments if needed
     return LayoutBuilder(
       builder: (context, constraints) {
-        bool isMobile = constraints.maxWidth < 600; // Example breakpoint
+        bool isMobile = constraints.maxWidth < 600;
 
         return Container(
           padding: EdgeInsets.symmetric(
             horizontal: isMobile ? 20 : 80, // Responsive padding
             vertical: 50,
           ),
-          // Optional: Add a semi-transparent overlay color if needed
-          // color: Colors.black.withOpacity(0.3),
+
+           color: Colors.black.withValues(),
           constraints: const BoxConstraints(minHeight: 500), // Ensure minimum height
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
