@@ -15,7 +15,7 @@ final theme = ThemeData(
     titleLarge: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
     titleMedium: TextStyle(color: Colors.white),
     headlineSmall: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-    headlineLarge: TextStyle(color: Colors.blue[800], fontSize: 30, fontWeight: FontWeight.w900 )
+    headlineLarge: TextStyle(color: Colors.blue[800], fontSize: 100, fontWeight: FontWeight.w900 )
   ),
 
   // Style buttons

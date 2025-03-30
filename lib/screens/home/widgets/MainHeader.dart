@@ -48,7 +48,7 @@ class MainHeader extends StatelessWidget {
                 backgroundColor: Colors.transparent,
                 child: ClipOval( // Clip the image to the circle
                     child: Image.asset(
-                      'assets/img/profile.png', // Ensure path is correct
+                      'assets/img/profile.jpg', // Ensure path is correct
                       fit: BoxFit.cover,
                       width: 50,
                       height: 50,
@@ -71,6 +71,7 @@ class MainHeader extends StatelessWidget {
                 children: [
                   _navItem('Home', Section.home, context),
                   _navItem('About', Section.about, context),
+                  _navItem('Experience', Section.experience, context),
                   _navItem('Portfolio', Section.portfolio, context),
                   _navItem('Contact', Section.contact, context),
                 ],
@@ -95,6 +96,7 @@ class MainHeader extends StatelessWidget {
                 itemBuilder: (context) => [
                   _popupMenuItem('Home', Section.home, context),
                   _popupMenuItem('About', Section.about, context),
+                  _popupMenuItem('Experience', Section.experience, context),
                   _popupMenuItem('Portfolio', Section.portfolio, context),
                   _popupMenuItem('Contact', Section.contact, context),
                 ],
@@ -103,17 +105,17 @@ class MainHeader extends StatelessWidget {
           ),
 
           // --- Get in Touch Button ---
-          ResponsiveRowColumnItem(
-            rowFlex: 0, // Doesn't expand
-            child: Padding(
-              padding: const EdgeInsets.only(top: 8.0), // Add padding if stacked
-              child: OutlinedButton(
-                onPressed: () => onNavItemTap(Section.contact),
-                style: Theme.of(context).outlinedButtonTheme.style,
-                child: const Text('Get in Touch'),
-              ),
-            ),
-          ),
+          // ResponsiveRowColumnItem(
+          //   rowFlex: 0, // Doesn't expand
+          //   child: Padding(
+          //     padding: const EdgeInsets.only(top: 8.0), // Add padding if stacked
+          //     child: OutlinedButton(
+          //       onPressed: () => onNavItemTap(Section.contact),
+          //       style: Theme.of(context).outlinedButtonTheme.style,
+          //       child: const Text('Get in Touch'),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
