@@ -26,7 +26,7 @@ class SubHeadingSection extends StatelessWidget {
 
             Text(
               "HI, I'M",
-              style: textTheme.bodyLarge?.copyWith(fontSize: 80, fontWeight: FontWeight.normal),
+              style: textTheme.bodyLarge?.copyWith(fontSize: 70, fontWeight: FontWeight.normal),
             ),
 
             const SizedBox(height: 20),

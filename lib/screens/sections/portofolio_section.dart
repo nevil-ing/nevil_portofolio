@@ -18,8 +18,8 @@ class PortfolioSection extends StatelessWidget {
           'Integrated Flask backend for dynamic news content.',
           'Implemented FCM for real-time campus notifications.'
         ],
-       imageUrl: 'assets/projects/egerton_app.png', // Add image path if you have one
-      projectUrl: 'https://github.com/your_repo' // Add link if available
+       imageUrl: 'assets/projects/egerton.jpg', // Add image path if you have one
+      projectUrl: 'https://github.com/nevil-ing/egerton_university_app' // Add link if available
     ),
     Project(
       title: 'Clawdius - Line Tracking Robot',
@@ -41,8 +41,8 @@ class PortfolioSection extends StatelessWidget {
           'Built with Flutter and Gemini API.',
           'Features quiz generation, topic summaries, and chatbot functionality.'
         ],
-       imageUrl: 'assets/projects/study_blitz.png',
-       projectUrl: 'https://github.com/your_repo/study_blitz'
+       imageUrl: 'assets/projects/studyblitz.png',
+       projectUrl: 'https://github.com/nevil-ing/StudyBlitzAI'
     ),
      Project(
         title: 'Rehnafarms Website',
