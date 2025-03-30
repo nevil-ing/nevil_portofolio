@@ -49,7 +49,7 @@ class AboutSection extends StatelessWidget {
               ),
               const SizedBox(height: 25),
               Text(
-                'Detail-oriented and innovative software developer with expertise in mobile and web development. Proficient in troubleshooting, resolving complex technical issues, and optimizing performance. Experienced in delivering impactful solutions using Kotlin, Flutter, and Python. Passionate about leveraging technology to empower users and enhance accessibility. Skilled collaborator with a track record of delivering results in cross-functional team environments.',
+                'Detail-oriented and innovative software developer with expertise in mobile and backend development. Proficient in troubleshooting, resolving complex technical issues, and optimizing performance. Experienced in delivering impactful solutions using Kotlin, Flutter, and Python. Passionate about leveraging technology to empower users and enhance accessibility. Skilled collaborator with a track record of delivering results in cross-functional team environments.',
                 style: textTheme.bodyMedium?.copyWith(fontSize: 18, height: 1.6),
               ),
               const SizedBox(height: 40),
