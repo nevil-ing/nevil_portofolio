@@ -1,29 +1,166 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- ... other head elements ... -->
-  <title>Nevil Portofolio</title>
-  <!-- ... -->
+  <!-- Basic Character Set & Compatibility -->
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+  <!-- === SEO & General Metadata === -->
+  <!-- IMPORTANT: Replace with your desired page title -->
+  <title>Nevil Ingutu - Flutter & Web Developer Portfolio</title>
+
+  <!-- IMPORTANT: Write a compelling description (150-160 characters) -->
+  <meta name="description" content="Portfolio of Nevil Ingutu, showcasing expertise in Flutter mobile development, web technologies (React, Next.js), and backend systems (Node.js, Python). Explore projects and skills.">
+
+  <!-- Optional: Add relevant keywords -->
+  <meta name="keywords" content="Nevil Ingutu, Flutter Developer, Web Developer, Mobile App Developer, Portfolio, Kotlin, Python, React, Next.js, Node.js, Firebase, Kenya, Software Engineer">
+
+  <!-- Author -->
+  <meta name="author" content="Nevil Ingutu">
+
+  <!-- === Open Graph / Facebook / LinkedIn Metadata === -->
+  <!-- Title shown when shared -->
+  <meta property="og:title" content="Nevil Ingutu - Flutter & Web Developer Portfolio">
+  <!-- Description shown when shared -->
+  <meta property="og:description" content="Portfolio of Nevil Ingutu, showcasing expertise in Flutter mobile development, web technologies, and backend systems.">
+  <!-- Type of content -->
+  <meta property="og:type" content="website">
+  <!-- IMPORTANT: Your website's full URL -->
+  <meta property="og:url" content="https://nevilingutu.dev/">
+  <!-- IMPORTANT: FULL URL to your preview image (e.g., profile pic, banner). Must be publicly accessible! -->
+  <!-- Example: <meta property="og:image" content="https://nevilingutu.dev/assets/assets/img/your_preview_image.png"> -->
+  <!-- You need to upload an image and get its full URL -->
+  <meta property="og:image" content="https://nevilingutu.dev/assets/assets/img/profile.png"> <!-- UPDATE WITH YOUR ACTUAL IMAGE URL -->
+
+  <!-- === Twitter Card Metadata === -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- IMPORTANT: Your website's full URL -->
+  <meta name="twitter:url" content="https://nevilingutu.dev/">
+  <!-- Title for Twitter -->
+  <meta name="twitter:title" content="Nevil Ingutu - Flutter & Web Developer Portfolio">
+  <!-- Description for Twitter -->
+  <meta name="twitter:description" content="Portfolio of Nevil Ingutu, showcasing expertise in Flutter mobile development, web technologies, and backend systems.">
+  <!-- IMPORTANT: FULL URL to your preview image. Can be same as og:image -->
+  <!-- Example: <meta name="twitter:image" content="https://nevilingutu.dev/assets/assets/img/your_preview_image.png"> -->
+  <meta name="twitter:image" content="https://nevilingutu.dev/assets/assets/img/profile.png"> <!-- UPDATE WITH YOUR ACTUAL IMAGE URL -->
+  <!-- Optional: <meta name="twitter:site" content="@YourTwitterHandle"> -->
+  <!-- Optional: <meta name="twitter:creator" content="@YourTwitterHandle"> -->
+
+
+  <!-- iOS meta tags & icons (Keep these if you had them) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Nevil Portfolio"> <!-- Shorter title for app icon -->
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon (Keep this) -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Manifest (Keep this) -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Flutter loading scripts (Keep these) -->
+  <script>
+    // If you're serving your web app in a path other than the root, change the
+    // href value below to reflect the base path you are serving from.
+
+    var serviceWorkerVersion = null;
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
+
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for service worker registration to prevent interfering with initial load.
+        navigator.serviceWorker.register('flutter_service_worker.js?v=' + serviceWorkerVersion)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing ?? reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update().then((reg) => {
+                waitForActivation(reg.installing ?? reg.waiting);
+              });
+            } else {
+              // Existing service worker is still valid.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
+
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to loading the app directly.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
+
+  <!-- Loading Indicator Styles (Keep these) -->
   <style>
     body {
-      /* APPLY A BACKGROUND COLOR OR IMAGE HERE that matches your app */
-      background-color: #121212; /* Dark color matching your theme */
+      background-color: #121212; /* Your dark theme background */
       margin: 0;
-      overflow: hidden; /* Prevent body scrollbars initially */
+      overflow: hidden;
     }
-    /* CSS for a simple loading spinner */
-    .loading-indicator { /* ... styles for centering ... */ }
-    .spinner { /* ... styles for the spinner animation ... */ }
-    @keyframes spin { /* ... spinner keyframes ... */ }
+    .loading-indicator {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       width: 100vw;
+     }
+    .spinner {
+       border: 4px solid rgba(255, 255, 255, 0.3);
+       border-radius: 50%;
+       border-top: 4px solid #3498db; /* Your theme accent color */
+       width: 40px;
+       height: 40px;
+       animation: spin 1s linear infinite;
+     }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
-<!-- Loading indicator shown immediately while Flutter loads -->
+<!-- Loading indicator (Keep this) -->
 <div id="loading-indicator" class="loading-indicator">
   <div class="spinner"></div>
 </div>
 
-<!-- Flutter initializes and eventually replaces the body content -->
-<script src="main.dart.js" type="application/javascript"></script>
+<!-- Flutter app will mount here (Keep this) -->
+<!-- The <script> tag might be dynamically added by the JS above -->
 </body>
 </html>
